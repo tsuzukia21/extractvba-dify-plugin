@@ -1,0 +1,26 @@
+identity:
+  name: extract_vba
+  author: tsuzukia21
+  label:
+    en_US: Extract VBA Code
+    ja_JP: VBAコード抽出
+description:
+  human:
+    en_US: Extract VBA code from Excel macro files (.xlsm, .xla, .xlam, etc.)
+    ja_JP: Excelマクロファイル（.xlsm, .xla, .xlamなど）からVBAコードを抽出します
+  llm: A tool for extracting VBA code from Excel macro files. Input should be an Excel file with macros.
+parameters:
+  - name: files
+    type: files 
+    required: true
+    label:
+      en_US: Excel Macro Files
+      ja_JP: Excelマクロファイル
+    human_description:
+      en_US: Upload Excel files containing VBA macros
+      ja_JP: VBAマクロを含むExcelファイルをアップロード
+    llm_description: Excel files containing VBA macros
+    form: llm
+extra:
+  python:
+    source: tools/extractvba.py
